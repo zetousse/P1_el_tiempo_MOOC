@@ -20,8 +20,8 @@
   "info": {
     "githubURL": "REACT-UPM/P1_el_tiempo_MOOC",
     "serverUrl": "https://moocbot.dit.upm.es/",
-    "courseId": "1313",
-    "assignmentId": "658"
+    "courseId": "1510",
+    "assignmentId": "856"
   },
   "scripts": {
     "start": "react-scripts start",
