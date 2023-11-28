@@ -1,4 +1,5 @@
 export const mock1 = {
+   "id":1,
     "lat":40.4168,
     "lon":-3.7038,
     "timezone":"Europe/Madrid",
