@@ -57,20 +57,16 @@ body {
 }
 
 #resultados {
-  
+  text-align: center;
   gap: 10px;
   padding-left: 20px;
-}
-
-#tituloresultados {
-  text-align: center;
 }
 
 #error {
   width: 100%;
 }
 
-#resultados li {
+#resultados2 li {
   width: 150px;
   margin: 10px;
   text-align: center;
@@ -83,7 +79,7 @@ body {
   padding: 10px;
 }
 
-#resultados li p img {
+#resultados2 li p img {
   width: 80px;
   height: 80px;
 }

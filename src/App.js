@@ -23,8 +23,7 @@ function App() {
     setResultado(null);
     setError(null);
 
-
-    console.log("CLICK");
+    //console.log("CLICK");
     if(USE_SERVER){
       try {
         let apiparams = "";
@@ -34,7 +33,7 @@ function App() {
           const data = await response.json();
           setTimezone(data.city.timezone);
           setResultado(data.list);
-          console.log(resultado);
+          //console.log(resultado);
           setError(null);
         }
         else {
@@ -44,15 +43,15 @@ function App() {
        
       }
       catch(error){
-        console.log("ERRRORRRRRRRR FATAL");
+        //console.log("ERRRORRRRRRRR FATAL");
         setError(error);
-        console.log(error);
+        //console.log(error);
       }
     } else {
       setTimezone(mock1.timezone_offset);
       setResultado(mock1.daily);
-      console.log("DATOS NO DESCARGADOS")
-      console.log(resultado)
+      //console.log("DATOS NO DESCARGADOS")
+      //console.log(resultado)
       setError(null);
     }
   }

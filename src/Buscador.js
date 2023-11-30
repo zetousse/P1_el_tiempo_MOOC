@@ -9,13 +9,4 @@ export default function Buscador(props) {
   const longitudRef = useRef(null);
 
   return (null);
-    /*<div id='buscador'>
-      <h2 id='titulo'>El tiempo</h2>
-      <div id='info'>
-        Latitud: <input type='number' id='latitud' ref={latitudRef} placeholder={latitud} />
-        Longitud: <input type='number' id='longitud' ref={longitudRef} placeholder={longitud} />
-        <button id='botonsearch'>Buscar</button>
-      </div>
-    </div>
-  );*/
 }
