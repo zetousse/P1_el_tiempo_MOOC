@@ -43,6 +43,7 @@ body {
 #buscador #titulo {
   width: 100%;
   justify-content: center;
+  text-align: center;
   gap: 30px;
 }
  
@@ -56,24 +57,27 @@ body {
 }
 
 #resultados {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  
   gap: 10px;
   padding-left: 20px;
 }
 
-#resultados #timezone {
-  width: 50%;
+#tituloresultados {
+  text-align: center;
 }
 
-#resultados #titulo {
+#error {
   width: 100%;
-  justify-content: left;
-}	
+}
 
 #resultados li {
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
   border: 1px solid #ccc;
   padding: 10px;

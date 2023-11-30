@@ -4,7 +4,7 @@ const CONFIG = {
   num_items: 4,
   default_lat: 40.416775,
   default_lon: -3.703790,
-  use_server: true
+  use_server: false
 }
 
 export default CONFIG;
