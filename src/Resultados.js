@@ -20,11 +20,11 @@ export default function Resultados(props) {
     
         if (USE_SERVER){
             return (
-                <div id="resultados">El tiempo en los próximos días será:
+                <div id="resultados">
                     <h3>Timezone: {obtenerLocalizacionZonaHoraria()}</h3>  
                     <h3>El tiempo en los más proximos días será: </h3>
                 
-                    <ul id="resultados2">
+                    <ul>
                         <div>       
                             {
                                 lista.map(item => (                   
@@ -43,11 +43,11 @@ export default function Resultados(props) {
             )
         }else{
             return (
-                <div id="resultados">El tiempo en los próximos días será:
+                <div id="resultados">
                     <h3>Timezone: {obtenerLocalizacionZonaHoraria()}</h3>  
                     <h3>El tiempo en los más proximos días será: </h3>
                 
-                    <ul id="resultados2">
+                    <ul>
                         <div>       
                             {                                  
                             lista.map(item => (                   
