@@ -66,7 +66,7 @@ body {
   width: 100%;
 }
 
-#resultados2 li {
+#resultados li {
   width: 150px;
   margin: 10px;
   text-align: center;
@@ -79,7 +79,7 @@ body {
   padding: 10px;
 }
 
-#resultados2 li p img {
+#resultados li p img {
   width: 80px;
   height: 80px;
 }
