@@ -37,8 +37,9 @@ function App() {
           setError(null);
         }
         else {
-          //throw (
-          //'Error: response status ' + response.status);
+          throw (
+          'Error: response status ' + response.status);
+            console.log("ERROR EN LA PETICION")
         }
        
       }
