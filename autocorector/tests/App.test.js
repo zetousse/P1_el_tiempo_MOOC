@@ -21,7 +21,7 @@ const mytestconfig = {
 
 jest.setTimeout(10000);
 
-jest.mock('../../src/config/config_default.js', () => ( {
+jest.mock('../../src/config/config', () => ( {
   __esModule: true,
   default: mytestconfig  
 } ));

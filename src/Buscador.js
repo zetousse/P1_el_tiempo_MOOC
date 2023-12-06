@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import CONFIG from './config/config_default';
+import CONFIG from './config/config';
 
 export default function Buscador(props) {
   const [latitud, setLatitud] = useState(CONFIG.default_lat);

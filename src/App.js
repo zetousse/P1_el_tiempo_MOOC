@@ -1,25 +1,21 @@
 import './App.css';
-import CONFIG from './config/config_default';
-import {useState, useRef} from "react";
+import CONFIG from './config/config';
+import {useState} from "react";
 import {mock1} from './constants/mock.js';
 import Header from './Header';
-import Buscador from './Buscador';
 import Resultados from './Resultados';
 
-var USE_SERVER = CONFIG.use_server;
-const numitems = CONFIG.num_items;
+var USE_SERVER = CONFIG.use_server; 
 
 function App() {
 
   const[latitud, setLatitud] = useState(CONFIG.default_lat);
   const[longitud, setLongitud] = useState(CONFIG.default_lon);
-  const[timezone, setTimezone] = useState(null);
   const[resultado, setResultado] = useState(null);
   const[error, setError] = useState(null);
 
   const callServer = async(param) => {
     
-    setTimezone(null);
     setResultado(null);
     setError(null);
 
@@ -31,9 +27,8 @@ function App() {
         const response = await fetch(`${CONFIG.server_url}${apiparams}`);
         if(response.status === 200){
           const data = await response.json();
-          setTimezone(data.city.timezone);
-          setResultado(data.list);
-          //console.log(resultado);
+          setResultado(data);
+          console.log(resultado);
           setError(null);
         }
         else {
@@ -44,15 +39,15 @@ function App() {
        
       }
       catch(error){
-        //console.log("ERRRORRRRRRRR FATAL");
+        console.log("ERRRORRRRRRRR FATAL");
         setError(error);
-        //console.log(error);
+        setResultado(null);
+        console.log(error);
       }
     } else {
-      setTimezone(mock1.timezone_offset);
-      setResultado(mock1.daily);
-      //console.log("DATOS NO DESCARGADOS")
-      //console.log(resultado)
+      setResultado(mock1);
+      console.log("DATOS NO DESCARGADOS")
+      console.log(resultado)
       setError(null);
     }
   }
@@ -73,7 +68,7 @@ function App() {
                     </div>}   
         </div>
       </div>
-      {resultado && <Resultados numitems={numitems} items= {resultado}  />}
+      {resultado && <Resultados numitems={CONFIG.num_items} items={resultado}  />}
     </div>
   );
 }
